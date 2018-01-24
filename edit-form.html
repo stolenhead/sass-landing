@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Use title if it's in the page YAML frontmatter -->
+		<title>Formidable</title>
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300" rel="stylesheet"> 
+		<link href="stylesheets/bootstrap.css" rel="stylesheet"/>
+		<link href="stylesheets/main.css" rel="stylesheet" />
+		<link href="/stylesheets/main.css" rel="stylesheet" />
+	</head>
+
+	<body>		
+<!-- Edit form page -->
+		<div class="full-container edit-form">
+			<div class="edit-form-header header">
+				<div class="header-nabvar navbar">
+					<img class="hero-logo" src="assets/Icons/PNGs/logo-fullColor.png">
+					<a class="hero-login">LOGIN </a>
+				</div>
+			</div>
+			<nav class="sub-header navbar-expand-lg navbar navbar-light">
+				<img class="hero-logo navbar-brand hidden" src="assets/Icons/PNGs/logo-fullColor.png">
+				<button class="burger-icon" type="button" data-toggle="collapse" data-target="#form-nav" aria-expanded="false" aria-label="Toggle navigation">
+				</button>
+				<div class="collapse navbar-collapse" id="form-nav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active hidden">
+							<a class="nav-link black" href="#">LOGIN</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link black" href="#">EDIT</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link black" href="#">VIEW</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link disabled" href="#">RESPONSES</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<form class="form form-box container">
+				<div class="form-header">
+					<div class="form-question form-group">
+						<label class="font-h1">What kind of restaurant do you prefer?</label>
+						<input class="form-control form-title form-control-lg font-h4" id="form-tittle" type="text" placeholder="Untitled form">
+					</div>
+				</div>
+				<div class="form-questions">
+					<div class="form-question form-group">
+						<label class="font-p">What is your name?</label>
+						<input class="form-control form-control-lg" id="name" type="text">
+						<h4 class="form-text text-muted">Your full name please</h4>
+					</div>
+					<hr>
+					<div class="form-question form-group">
+						<label class="font-p">What is the single most important quality of a restaurant?</label>
+						<div class="form-check">
+							<input class="form-check-input" id="check-loud" name="check-loud" type="radio" >
+							<label class="form-check-label" for="check-loud">How loud or quiet it is</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="check-drink-selection" name="check-drink-selection" type="radio" >
+							<label class="form-check-label" for="check-drink-selection">The drink selection</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" id="check-food-quality" name="check-food-quality" type="radio" >
+							<label class="form-check-label" for="check-food-quality">The quality of the food</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input form-control-lg" id="check-dessert" name="check-dessert" type="radio" >
+							<label class="form-check-label" for="check-dessert">The dessert</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input form-control-lg" id="check-other" name="check-other" type="radio">
+							<label class="form-check-label" for="check-other">Other:</label>
+							<input class="form-control" id="check-other" type="text">
+						</div>
+						<h4>Think hard! You can only choose one.</h4>
+					</div>
+				</div>
+			</form>
+			<div class="add-question container">
+				<div class="add-inputs">
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label" for="add-question-title">QUESTION TITLE</label>
+						<div class="col-sm-10">
+							<input class="form-control" id="add-question-title" type="text">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label" for="add-help-text">HELP TEXT</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" id="add-help-text" rows="3"></textarea>
+						</div>
+					</div>
+					<form class="form-group row">
+						<label class="col-lg-2 col-md-2 col-sm-2 col-form-label" for="add-question-type">OTHER</label>
+						<div class="col-lg-10 col-md-10 col-sm-10 form-select">
+							<select class="custom-select" id="add-question-type">
+								<option selected>Select...</option>
+								<option value="1">One</option>
+								<option value="2">Two</option>
+								<option value="3">Three</option>
+							</select>
+						</div>
+					</form>
+					<button class="btn btn-save">SAVE</button>
+				</div>
+				<div class="add-button">
+					<p class="add-title">ADD A QUESTION</p>
+					<div class="row">
+						<a class="btn-add-form add-single-line btn btn-lg">
+							<span>SINGLE LINE</span>				
+						</a>
+						<a class="btn-add-form add-paragraph btn btn-lg">
+							<span>PARAGRAPH</span>				
+						</a>
+						<a class="btn-add-form add-checkboxes btn btn-lg">
+							<span>CHECKBOXES</span>				
+						</a>
+						<a class="btn-add-form add-multiple btn btn-lg">
+							<span>MULTIPLE CHOICE</span>				
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="javascripts/vendor/jquery-3.2.1.min.js"></script>
+	<script src="javascripts/main.js"></script>
+	<script src="javascripts/vendor/bootstrap_js/bootstrap.js"></script>
+</html>

@@ -1,0 +1,253 @@
+
+//badd question buttons ---------------------- //
+
+.add-single-line,
+.add-paragraph,
+.add-checkboxes,
+.add-multiple,
+.burger-icon {
+	background-repeat: no-repeat;
+	background-position-y: center;
+	font-size: ($font-size-small - 4);
+}
+
+.add-single-line,
+.add-paragraph {
+	background-position-x: 11rem;
+	@media screen and (max-width: $media-mobile) {
+		background-position-x: ($space-base * 15);
+	}
+}
+
+.add-checkboxes {
+	background-position-x: 11rem;
+	@media screen and (max-width: $media-mobile) {
+		background-position-x: ($space-base * 15);
+	}
+}
+
+.add-multiple {
+	background-position-x: 11.5rem;
+	@media screen and (max-width: $media-mobile) {
+		background-position-x: ($space-base * 16);
+	}
+}
+
+.add-single-line {
+	background-image: url("../assets/Icons/PNGs/singleLine-regular.png");
+	background-size: $single-width $single-height;
+	&:hover {
+		background-image: url("../assets/Icons/PNGs/singleLine-hover.png");
+	}
+	&:active {
+		background-image: url("../assets/Icons/PNGs/singleLine-hover.png")!important;
+	}
+}
+
+.add-paragraph {
+	background-image: url("../assets/Icons/PNGs/paragraph-regular.png");
+	background-size: $paragraph-width $paragraph-height;
+	&:hover {
+		background-image: url("../assets/Icons/PNGs/paragraph-hover.png");
+	}
+	&:active {
+		background-image: url("../assets/Icons/PNGs/paragraph-hover.png")!important;
+	}
+}
+
+.add-checkboxes {
+	background-image: url("../assets/Icons/PNGs/checkboxes-regular.png");
+	background-size: $check-width $check-height;
+	&:hover {
+		background-image: url("../assets/Icons/PNGs/checkboxes-hover.png");
+	}
+	&:active {
+		background-image: url("../assets/Icons/PNGs/checkboxes-hover.png")!important;
+	}
+}
+
+.add-multiple {
+	background-image: url("../assets/Icons/PNGs/multiple-regular.png");
+	background-size: $radio;
+	&:hover {
+		background-image: url("../assets/Icons/PNGs/multiple-hover.png");
+	}
+	&:active {
+		background-image: url("../assets/Icons/PNGs/multiple-hover.png")!important;
+	}
+}
+
+.add-button {
+	margin-top: ($space-base * 4);
+	margin-bottom: ($space-base * 3);
+	padding-top: ($space-base * 3);
+	padding-bottom: ($space-base * 3);
+	border: 1px dotted $light-gray;
+	.add-title {
+		text-align: center;
+		padding: $space-base;
+		font-size: $font-size-small;
+	}
+	.row {
+		margin-left: $space-base;
+		margin-right: $space-base;
+	}
+}
+
+//block header subheader -------------------------------------------//
+
+.black {
+	color: black;
+	&:hover {
+		color: black;
+	}
+}
+
+.burger-icon{
+	width: $burguer-width;
+	height: $burguer-height;
+	display: none;
+	background-color: transparent;
+	border: 1px solid transparent;
+	background-image: url("../assets/Icons/PNGs/burger-regular.png");
+	background-size: $burguer-width $burguer-height;
+	&:hover {
+		background-image: url("../assets/Icons/PNGs/burger-hover.png");
+	}
+	@media screen and (max-width: $media-other) {
+		display: block;
+	}
+}
+
+.disabled {
+	color: $light-gray!important;
+	&:hover{
+		border-bottom: 3px solid $light-gray!important;
+	}
+}
+
+.sub-header {
+	padding-top: $space-base;
+	padding-left: ($space-base * 4);
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+	.nav-link {
+		padding: $space-base 0.2rem;
+		margin-left: $space-base;
+		font-weight: bold;
+		&:hover {
+			border-bottom: 3px solid black;
+		}
+	}
+	@media screen and (max-width: $media-other) {
+		padding-left: $space-base;
+		padding-bottom: ($space-base * 3);
+	}
+}
+
+//block form input style ---------------------------------------//
+
+.form-box {
+	margin-top: ($space-base * 4);
+}
+
+.form-title {
+	border-top: transparent;
+	border-right: transparent;
+	border-left: transparent;
+	padding-bottom: 1rem;
+}
+
+.form-question,
+.form-check {
+	padding-top: $space-base;
+	padding-bottom: $space-base;
+	.form-check-label {
+		font-size: $font-size-small;
+		color: $dark-gray;
+	}
+}
+
+.form-group {
+	margin-bottom: $space-base;
+	.font-p {
+		font-weight: bold;
+	}
+}
+
+.form-select select {
+	border-radius: 0;
+	color: #333333;
+	height: 43px;
+	text-indent: 1px;
+	text-overflow: '';
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: $white url("../assets/Icons/PNGs/down-regular.png") no-repeat right center;
+	&:active {
+		background: url("../assets/Icons/PNGs/up-hover.png") no-repeat right center; 
+	}
+	&:hover {
+		border-color: $dark-gray;
+		background: $white url("../assets/Icons/PNGs/down-hover.png") no-repeat right center;
+	}
+}
+
+@-moz-document url-prefix() {
+	.area-form-home .form-group {
+		margin-right: 4px; 
+		position: relative; 
+		z-index: 1;
+	}
+
+	.area-form-home .form-group:before {
+		content: url("../assets/Icons/PNGs/down-regular.png"); 
+		width: 31px; 
+		height: 43px; 
+		position: absolute; 
+		right: 1px; 
+		top: 0px;
+	}
+
+	.area-form-home .form-group > select { 
+		-webkit-box-sizing: border-box; 
+		background: none;
+		background-color: $white; 
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+	.form-group select::-ms-expand {
+		display: none;
+	}
+
+	.form-group select:focus {
+		outline: none;
+	}
+
+	:-moz-any(.form-group):before {
+		background-color: $white;
+		pointer-events: none; 
+	}
+
+	.area-form-home .form-group.search:before { 
+		content: normal;
+	}	
+}
+
+.form-control,
+.custom-select {
+	border-radius: 0!important;
+	box-shadow: none!important;
+	border-color: $light-gray;
+	&:active {
+		border-color: $turquoise;
+	}
+	&:hover {
+		border-color: $gray;
+	}
+}

@@ -1,0 +1,261 @@
+
+//buttons regular add-form save
+
+.btn-regular,
+.btn-add-form,
+.btn-save {
+	border-radius: $border-radius-base;
+	margin-top: $space-base;
+}
+
+.btn-regular {
+	border: 2px solid $white;
+	color: $white;
+	&:hover {
+		border: 2px solid $white!important;
+		background-color: $white!important;
+		color: $turquoise;
+	}
+	&:active {
+		background-color: $light-turquoise!important;
+		border: 1px solid $light-turquoise!important;
+		color: $black-turquoise!important;
+		box-shadow: none!important;
+	}
+	&:focus {
+		box-shadow: none!important;
+	}
+	@media screen and (max-width: $media-mobile) {
+		width: 100%;
+	}
+}
+
+.btn-add-form {
+	width: 24%;
+	border: 2px solid $turquoise;
+	color: $turquoise!important;
+	padding: ($space-base * 1.3) ($space-base * 4.3) $space-base ($space-base * 2);
+	margin: auto;
+	margin-bottom: $space-base;
+	&:hover {
+		border: 2px solid $turquoise!important;
+		background-color: $turquoise!important;
+		color: $white!important;
+	}
+	&:active {
+		background-color: $black-turquoise!important;
+	}
+	&:focus {
+		box-shadow: none!important;
+	}
+	@media screen and (max-width: $media-mobile) {
+		width: 100%;
+	}
+}
+
+.btn-save {
+	border: 2px solid $turquoise!important;
+	padding: ($space-base * 0.5) ($space-base * 3);
+	margin-left: 12rem;
+	background-color: $turquoise!important;
+	color: $white!important;
+	&:hover {
+		border: 2px solid $light-turquoise!important;
+		background-color: $light-turquoise!important;
+	}
+	&:active {
+		background-color: $black-turquoise!important;
+	}
+	&:focus {
+		box-shadow: none!important;
+	}
+	@media screen and (max-width: $media-mobile) {
+		width: 100%;
+		margin-left: 0;
+	}
+}	
+
+//general fonts heading, h1, h2, h3, h4, p-----------------//
+
+.font-h1,
+.font-h2,
+.font-h3,
+.font-h4,
+.font-p,
+.font-heading {
+	margin-bottom: $space-base;
+}
+
+.font-heading {
+	font-family: $font-display;
+  font-size: $font-size-big;
+}
+
+.font-h1,
+.font-h2,
+.font-h3,
+.font-h4,
+.font-p {
+	font-family: $font-robotol;
+}
+.font-h1 {
+	font-size: $font-h1;
+	font-family: $font-display;
+	@media screen and (max-width: $media-mobile) {
+		font-size: ($font-h1 - 2);
+	}
+}
+
+.font-h2 {
+	font-size: $font-h2;
+}
+
+.font-h3 {
+	font-size: $font-h3;
+}
+
+.font-h4 {
+  font-size: $font-h4;
+}
+
+.font-p {
+	font-size: $font-p;
+}
+
+//links decoration ----------------------------------//
+
+a {
+	text-decoration: none;
+	color: $light-turquoise;
+	padding: $space-base;
+	&:hover {
+		color: $turquoise;
+		text-decoration: underline;
+	}
+	&:active {
+		color: $black-turquoise;
+		text-decoration: underline;
+	}
+}
+
+//block home-hero header ----------------------------//
+
+body {
+	overflow-x: hidden;
+	@media screen and (max-width: $media-mobile) {
+		overflow-x: scroll;
+	}
+}
+
+.hero-burger {
+	display: none;
+	@media screen and (max-width: $media-mobile) {
+		display: block;
+	}
+}
+
+.hero-logo  {
+	width: $logo-width;
+	margin-left: ($space-base * 4);
+	@media screen and (max-width: $media-mobile) {
+		margin-left: 0;
+	}
+}
+
+.hero-login {
+	margin-right: ($space-base * 3);
+	@media screen and (max-width: $media-mobile) {
+		display: none;
+	}
+}
+
+.hero-main-white  { 
+  width: 42%;
+  margin-left: ($space-base * 5);
+	padding-top: 10rem;
+	height: 34rem;
+	button {
+		padding-left: ($space-base * 4);
+		padding-right: ($space-base * 4)
+	}
+	@media screen and (max-width: 667px) {
+		width: 93%;
+		margin-left: 0rem;
+		padding-left: 3rem;
+		box-sizing: border-box;
+		text-align: center;
+  }
+}
+
+//block home  content ------------------------//
+
+.content-h1{
+  margin-top: $space-base;
+  margin-bottom: ($space-base + 1);
+}
+
+.content-h4  {
+  color:  #9b9b9b;
+}
+
+.content-text {
+  width: 91%;
+  text-align: center;
+  padding: ($space-base * 8) ($space-base * 2);
+	margin: auto;
+	@media screen and (max-width: 667px) {
+		width: 91%;
+		text-align: center;
+		padding: $space-base ($space-base * 2);
+		margin-left: 0rem;
+		box-sizing: border-box;
+  }
+}
+
+.content-images {
+  background-color: $background;
+  padding: 4rem;
+	box-sizing: border-box;
+	.content-p {
+		font-size: $font-size-small;
+		margin-bottom: $space-base;
+	}
+}
+
+//block home footer -----------------------------//
+
+.home-footer {
+  padding: 5rem;
+	text-align: center;
+	a {
+		font-size: $font-size-small;
+		margin-right: $space-base;
+		@media screen and (max-width: 667px) {
+			width: 100%;
+			margin-top: $space-base;
+		}
+	}
+	@media screen and (max-width: 667px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -15px;
+		margin-left: -15px;
+  }
+}
+
+// general queries ------------------------------//
+
+@media screen and (max-width: 991px) {
+	.edit-form-header {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 668px) {
+	.home-hero {
+		display: block;
+	}
+	.hero-login {
+		display: none;
+	}
+}
